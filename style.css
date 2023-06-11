@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #fff;
+    --light: #CCCCFF;
+    --primary: #6495ED;
+    --red: #ea1538;
+    --dark: #17202A;
+    --yellow: #FFBF00;
+}
+body {
+    font-family: monospace;
+    background-color: #CCCCFF;
+}
+
+#root {
+    margin: 100px auto;
+    width: 600px;
+}
+
+.select-header {
+    background-color: #17202A;
+    color: #CCCCFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.select-header i {
+    cursor: pointer;
+    padding: 5px;
+    border: #6495ED solid 4px;
+    border-radius: 10px;
+    font-size: 20px 30px;
+    transform: translateX(5px);
+}
+.select-header i:hover {
+    background-color: #6495ED;
+}
+
+.options {
+    background-color: #17202A;
+    color: #CCCCFF;
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 0px;
+    transition: 0.3s;
+    opacity: 0;
+
+}
+.active {
+    opacity: 1;
+    height: 250px;
+    overflow-y: scroll;
+}
+.options.active::-webkit-scrollbar {
+    border-radius: 0 10px 10px 0;
+    background-color: #17202A;
+    width: 10px;
+}
+.options.active::-webkit-scrollbar-thumb {
+    background-color: #6495ED;
+    border-radius: 0 10px 10px 0;
+}
+
+.options .option {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.option:hover {
+    background-color: #6495ED;
+    color: #17202A;
+}
+
